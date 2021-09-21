@@ -1,9 +1,43 @@
----
- layout: iframe
- title: KrowdBazaar
----
-<div>
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+		<title>#1 Omnichannel E-commerce Shopping Cart &amp; Online Store Solution!</title>
+		<script src="js/jquery.min.js"></script>
+		<style>
+			body {
+				margin: 0;
+				overflow:hidden;
+			}
+			iframe {
+				height:calc(100vh - 4px);
+				width:calc(100vw - 4px);
+				box-sizing: border-box;
+				border:0;
+				overflow:hidden;
+				Overflow-x: hidden; Overflow-y: hidden;
+			}
+			div {overflow:hidden;}
+			div iframe {border:0;overflow:hidden;}
+	  	</style>
+		
+		<script>
+			 $(document).ready(function() {
+				var calling_url = window.location.href;
+				var revised_url = calling_url.replace("https://www.krowdbazaar.com/dashboard","https://my.shopsettings.com/p/jkrowdbazaar").replace("https://www.krowdbazaar.com","https://my.shopsettings.com/p/jkrowdbazaar").replace("https://www.krowdbazaar.com/logout","https://my.shopsettings.com/p/jkrowdbazaar");
+				console.log('Entered with adress: ' + calling_url + ", revised url: " + revised_url);
+				window.frames['kbazaar_iframe'].src = revised_url;
+			 });
+		</script>
+	</head>
+	
+	<body>
+
  <iframe id="kbazaar_iframe" src="https://my.shopsettings.com/p/jkrowdbazaar" frameborder="0" scrolling="yes" allowfullscreen></iframe>
-</div>
+
+	</body>
+</html>
+
+
 
 
