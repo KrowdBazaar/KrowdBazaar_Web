@@ -1,0 +1,129 @@
+---
+layout: shopapp
+---
+
+<div class="page">
+
+	<div class="block-shopapp-essential">
+		<div><h1>Mobile Apps are Essential</h1>
+			<p>The web is&nbsp;becoming mobile and&nbsp;the&nbsp;window to&nbsp;mobile is&nbsp;the&nbsp;mobile app. With ShopApp we automatically create and&nbsp;publish a&nbsp;native mobile app in&nbsp;the&nbsp;Apple App Store and&nbsp;Google Play for&nbsp;you.</p>
+			<div class="menu">
+				<a href="images/accessories.jpg" target="_blank" class="selected"> Accessories </a>
+				<a href="images/clothing.jpg" target="_blank"> Clothing </a>
+				<a href="images/electronics.jpg" target="_blank"> Electronics </a>
+				<nobr>
+					<a href="images/food.jpg" target="_blank"> Food </a>
+					<a href="images/household.jpg" target="_blank"> Household </a>
+				</nobr>
+			</div>
+			<div class="screens">
+				<div class="wrapper">
+					<div class="pattern">
+						<img src="images/accessories.jpg" alt="" width="928">
+					</div>
+					<img src="images/accessories.jpg" alt="" class="selected">
+					<img src="images/clothing.jpg" alt="">
+					<img src="images/electronics.jpg" alt="">
+					<img src="images/food.jpg" alt="">
+					<img src="images/household.jpg" alt="">
+				</div>
+			</div>
+			<script>/*<![CDATA[*/
+			var shopMenuCurrent = 0;
+			var shopMenuLinks = document.querySelectorAll('.block-shopapp-essential .menu a');
+			var shopMenuBlocks = document.querySelectorAll('.block-shopapp-essential .wrapper > img');
+			for (var i = 0; i < shopMenuLinks.length; i++) {
+				shopMenuLinks[i].addEventListener('click', (function (j) {
+					return function (e) {
+						e.preventDefault();
+						shopMenuLinks[shopMenuCurrent].classList.remove('selected');
+						shopMenuBlocks[shopMenuCurrent].classList.remove('selected');
+						shopMenuLinks[j].classList.add('selected');
+						shopMenuBlocks[j].classList.add('selected');
+						shopMenuCurrent = j;
+					}
+				})(i), !1);
+			}
+			var shopMenuScroller = document.querySelector('.screens');
+			var shopMenuWrapper = document.querySelector('.wrapper');
+			shopMenuScroller.scrollLeft = (shopMenuWrapper.offsetWidth - shopMenuScroller.offsetWidth) / 2 + shopMenuWrapper.offsetLeft;
+			/*]]>*/</script>
+		</div>
+	</div>
+
+	<div class="block-shopapp-checkout">
+		<div>
+			<div class="pay">
+				<div class="apple">
+					<svg width="147" height="82" viewBox="0 0 147 82" xmlns="http://www.w3.org/2000/svg">
+						<title>Apple Pay Button White Copy</title>
+						<g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+							<rect stroke="#000" fill="#FFF" width="145" height="80" rx="10"></rect>
+							<path d="M112.88 32.552l-4.86 13.193c-.3.797-.586 1.6-.844 2.382-.126.39-.247.758-.363 1.11h-.09c-.12-.367-.24-.75-.374-1.152-.253-.774-.524-1.533-.802-2.257l-5.198-13.276h-2.777l7.433 19.085c.195.46.224.67.224.756 0 .026-.01.182-.228.762-.463 1.143-.996 2.13-1.576 2.928-.597.81-1.14 1.467-1.627 1.953-.566.564-1.15 1.027-1.742 1.376-.606.355-1.158.645-1.647.863l-.28.126.906 2.198.287-.106c.236-.09.677-.29 1.35-.618.677-.333 1.428-.862 2.23-1.578.687-.598 1.318-1.31 1.875-2.11.55-.786 1.098-1.71 1.637-2.735.533-1.023 1.066-2.188 1.588-3.464.52-1.28 1.077-2.713 1.655-4.253l6.005-15.18h-2.782zM92.558 46.568c0 .277-.066.658-.192 1.114-.16.475-.394.945-.7 1.393-.303.443-.685.85-1.136 1.206-.448.355-.984.64-1.593.85-.61.212-1.313.318-2.088.318-.47 0-.93-.08-1.373-.232-.435-.155-.822-.386-1.155-.69-.33-.303-.602-.697-.81-1.172-.204-.473-.31-1.058-.31-1.738 0-1.114.3-2.02.89-2.68.61-.687 1.39-1.216 2.32-1.57.95-.366 2.008-.605 3.14-.714.92-.09 1.823-.133 2.678-.133h.327v4.048zm2.647 4.055c-.03-.807-.042-1.614-.042-2.42v-7.918c0-.94-.094-1.896-.28-2.847-.19-.97-.552-1.863-1.078-2.65-.53-.793-1.272-1.45-2.2-1.947-.926-.496-2.13-.75-3.582-.75-1.06 0-2.093.14-3.072.41-.983.275-1.95.734-2.872 1.365l-.212.147.88 2.055.318-.214c.672-.453 1.43-.814 2.256-1.07.822-.254 1.662-.383 2.498-.383 1.084 0 1.95.195 2.57.584.627.39 1.1.877 1.406 1.443.32.585.528 1.207.618 1.854.1.673.145 1.274.145 1.792v.23c-3.86-.02-6.875.623-8.878 1.91-2.1 1.352-3.167 3.276-3.167 5.716 0 .702.126 1.41.376 2.11.25.71.632 1.34 1.134 1.882.504.55 1.153.995 1.933 1.33.775.336 1.688.507 2.706.507.808 0 1.564-.105 2.25-.307.683-.204 1.3-.475 1.84-.812.537-.33 1.013-.705 1.42-1.11.183-.18.34-.364.494-.546h.102l.238 2.312h2.51l-.07-.372c-.134-.737-.217-1.508-.244-2.3zM75.047 37.528c-1.337 1.12-3.228 1.686-5.63 1.686-.66 0-1.286-.027-1.86-.082-.474-.045-.912-.12-1.307-.22v-12.11c.343-.063.77-.123 1.27-.178.633-.067 1.4-.1 2.274-.1 1.083 0 2.086.128 2.976.384.88.253 1.65.63 2.286 1.12.625.483 1.118 1.11 1.46 1.87.34.767.515 1.68.515 2.72 0 2.153-.667 3.805-1.983 4.91zm2.395-10.878c-.814-.784-1.866-1.393-3.12-1.812-1.245-.414-2.74-.622-4.444-.622-1.176 0-2.277.056-3.267.17-.977.11-1.886.237-2.704.378l-.26.045v28.484h2.604v-12c.878.15 1.88.227 2.988.227 1.475 0 2.855-.186 4.105-.556 1.263-.373 2.37-.95 3.29-1.714.925-.766 1.663-1.725 2.2-2.852.532-1.13.803-2.457.803-3.95 0-1.234-.195-2.345-.576-3.3-.386-.958-.93-1.795-1.618-2.498zM51.45 38.54c-.035-4.05 3.31-6.002 3.465-6.1-1.89-2.74-4.815-3.12-5.858-3.162-2.495-.247-4.873 1.467-6.136 1.467-1.265 0-3.21-1.428-5.286-1.385-2.72.04-5.225 1.58-6.627 4.007-2.818 4.907-.715 12.15 2.036 16.12 1.347 1.942 2.95 4.125 5.06 4.046 2.03-.08 2.793-1.313 5.246-1.313 2.45-.003 3.14 1.31 5.282 1.272 2.184-.048 3.57-1.984 4.908-3.937 1.54-2.247 2.176-4.433 2.21-4.543-.045-.026-4.25-1.628-4.3-6.473zM46.81 26.65c1.117-1.355 1.87-3.233 1.667-5.108-1.614.066-3.568 1.08-4.716 2.425-1.04 1.195-1.942 3.11-1.693 4.947 1.795.14 3.625-.913 4.742-2.265z" fill="#000"></path>
+						</g>
+					</svg>
+				</div>
+				<div class="android">
+					<svg width="112" height="112" viewBox="0 0 112 112" xmlns="http://www.w3.org/2000/svg">
+						<title>android_pay_logo_rgb_oc_dark</title>
+						<g fill="none" fill-rule="evenodd">
+							<path d="M56 2C26.177 2 2 26.177 2 56s24.177 54 54 54 54-24.177 54-54S85.823 2 56 2z" stroke="#D3D3D3" stroke-width="2" fill="#FFF"></path>
+							<path d="M45.024 33.695h-.122v16.177c0 1.35 1.104 2.454 2.454 2.454h2.116v5.64c0 1.354 1.1 2.452 2.454 2.452 1.355 0 2.454-1.098 2.454-2.453v-5.64h3.307v5.64c0 1.355 1.1 2.453 2.454 2.453 1.356 0 2.454-1.098 2.455-2.453v-5.64h2.062c1.35 0 2.454-1.103 2.454-2.453V33.695H45.025zm4.888-5.828c0 .576.467 1.043 1.043 1.043.576 0 1.043-.467 1.043-1.043 0-.576-.467-1.043-1.043-1.043-.576 0-1.043.467-1.043 1.043zm10.103 0c0 .576.467 1.043 1.043 1.043.576 0 1.043-.467 1.043-1.043 0-.576-.466-1.043-1.042-1.043-.576 0-1.043.467-1.043 1.043zm-15.085 4.97c-.005-.112-.007-.224-.007-.337 0-.752.094-1.485.273-2.19.69-2.713 2.63-5.003 5.256-6.363l-1.703-3.142c-.106-.193-.034-.435.16-.54.193-.105.435-.033.54.16l1.724 3.18c1.466-.636 3.113-.993 4.853-.993 1.728 0 3.362.352 4.82.978l1.716-3.165c.105-.193.347-.265.54-.16.194.105.266.347.16.54L61.57 23.93c2.754 1.416 4.762 3.854 5.37 6.732.068.325.12.656.15.99v1.184H44.93zm27.955 2.883c0-1.355-1.1-2.453-2.454-2.453s-2.452 1.098-2.453 2.453v10.308c0 1.355 1.1 2.453 2.454 2.453 1.356 0 2.455-1.097 2.455-2.452V35.72zm-28.862 0v10.308c0 1.355-1.1 2.453-2.454 2.453-1.356 0-2.455-1.097-2.455-2.452V35.72c0-1.355 1.1-2.453 2.454-2.453s2.452 1.098 2.453 2.453z" fill="#95C964"></path>
+							<path d="M84.877 65.84L78.71 80.644 72.545 65.86h-3.26l7.777 18.046-.62 1.406c-.692 1.555-2.004 2.23-3.26 2.23h-1.03v2.83h.993c2.792 0 5.004-1.5 6.184-4.348l8.714-20.183h-3.167zM67.6 84.6V65.86h-2.812v2.136c-1.574-1.574-3.748-2.51-6.222-2.51-5.36 0-9.576 4.346-9.576 9.725 0 5.398 4.217 9.764 9.576 9.764 2.474 0 4.648-.955 6.222-2.51V84.6h2.81zm-8.828-2.362c-3.84 0-6.952-3.148-6.952-7.027 0-3.86 3.11-7.008 6.952-7.008 2.4 0 4.667 1.124 5.83 3.055.055.112.186.3.186.618v6.653c-.02.337-.13.543-.206.637-1.256 1.874-3.41 3.073-5.81 3.073zM31.3 90.222v-7.76c1.574 1.575 3.747 2.53 6.22 2.53 5.342 0 9.577-4.365 9.577-9.744 0-5.397-4.235-9.763-9.576-9.763-2.473 0-4.646.955-6.22 2.51V65.86h-2.812V90.22h2.81zm6.015-7.965c-2.4 0-4.63-1.143-5.828-3.055-.075-.112-.188-.3-.188-.618v-6.728c.018-.318.13-.524.206-.618 1.255-1.874 3.41-3.017 5.81-3.017 3.822 0 6.933 3.15 6.933 7.028 0 3.86-3.112 7.01-6.935 7.01z" fill="#757575"></path>
+						</g>
+					</svg>
+					<br> Coming soon
+				</div>
+			</div>
+			<h1>One Touch Checkout</h1>
+			<p>With a&nbsp;native ecommerce app your customers can use all the&nbsp;
+				<nobr>built-in</nobr>
+				mobile features available on&nbsp;their devices like push notifications, geolocation, Apple Pay or&nbsp;Android Pay so&nbsp;you can increase your sales and&nbsp;stay in&nbsp;thumb's reach.
+			</p>
+			<img class="img" src="images/apple-pay-img.jpg" alt="">
+		</div>
+	</div>
+
+	<div class="block-shopapp-apps">
+		<div><h1>Apps for&nbsp;iOS and&nbsp;Android</h1>
+			<p>ShopApp will allow you to&nbsp;cover 96% of&nbsp;all mobile customers by&nbsp;publishing your synchronized storefront app on&nbsp;both iOS and&nbsp;Android platforms.</p>
+			<div class="wrapper">
+				<div class="wrapper-inner">
+					<div class="logos">
+						<div class="apple">
+							<svg width="52" height="65" viewBox="0 0 52 65" xmlns="http://www.w3.org/2000/svg"><title>Apple</title>
+								<path d="M29.31 4.856C31.61 2.15 35.5.136 38.713 0c.41 3.76-1.098 7.526-3.326 10.24-2.232 2.707-5.885 4.817-9.47 4.536-.487-3.68 1.32-7.516 3.39-9.92zM47.576 56.15c-2.665 3.91-5.42 7.793-9.772 7.874-4.28.082-5.654-2.544-10.54-2.544-4.892 0-6.423 2.463-10.466 2.626-4.2.158-7.396-4.22-10.08-8.112C1.23 48.04-2.96 33.502 2.674 23.69c2.79-4.872 7.788-7.954 13.204-8.036 4.125-.076 8.022 2.79 10.54 2.79 2.525 0 7.256-3.44 12.228-2.936 2.082.086 7.923.84 11.676 6.348-.297.196-6.973 4.093-6.893 12.21.083 9.697 8.472 12.92 8.57 12.964-.077.228-1.342 4.602-4.423 9.12z" fill="#4086CD" fill-rule="evenodd"></path>
+							</svg>
+						</div>
+						<div class="android">
+							<svg width="57" height="69" viewBox="0 0 57 69" xmlns="http://www.w3.org/2000/svg"><title>Shape</title>
+								<path d="M32.34 10.83c0-1.222.98-2.2 2.14-2.2 1.224 0 2.2.978 2.2 2.2 0 1.16-.976 2.14-2.2 2.14-1.16 0-2.14-.98-2.14-2.14zM8.62 40.952v-15.09c0-2.323-1.956-4.277-4.28-4.277C1.958 21.585 0 23.54 0 25.86v15.092c0 2.383 1.957 4.34 4.34 4.34 2.324 0 4.28-1.957 4.28-4.34zm36.682-19.367H10.76v27.983c0 2.26 1.834 4.095 4.096 4.095h.245V64.66c0 2.384 1.957 4.34 4.34 4.34 2.325 0 4.28-1.956 4.28-4.34V53.664h8.62V64.66c0 2.384 1.957 4.34 4.34 4.34 2.324 0 4.28-1.956 4.28-4.34V53.664h.307c2.2 0 4.035-1.834 4.035-4.095V21.585zm2.14 4.276v15.092c0 2.383 1.956 4.34 4.34 4.34 2.324 0 4.28-1.957 4.28-4.34v-15.09c0-2.323-1.956-4.277-4.28-4.277-2.384 0-4.34 1.954-4.34 4.276zm-23.72-15.03c0 1.16-.98 2.14-2.14 2.14-1.224 0-2.14-.98-2.14-2.14 0-1.222.916-2.2 2.14-2.2 1.16 0 2.14.978 2.14 2.2zM10.76 19.446h34.542c0-5.744-2.812-10.877-7.153-13.992l3.605-3.606c.43-.428.43-1.1 0-1.527-.428-.427-1.1-.427-1.527 0l-3.974 3.973c-2.445-1.345-5.257-2.14-8.193-2.14-2.994 0-5.806.795-8.25 2.14L15.833.32c-.366-.427-1.1-.427-1.467 0-.427.428-.427 1.1 0 1.528l3.546 3.606c-4.28 3.115-7.153 8.248-7.153 13.992z" fill="#95C964" fill-rule="evenodd"></path>
+							</svg>
+						</div>
+					</div>
+					<div class="phones">
+						<div class="apple">
+							<img src="images/ios-img.jpg" alt="">
+						</div>
+						<div class="android">
+							<img src="images/android-img.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="block-shopapp-sync">
+		<div><h1>Synced with your Store</h1>
+			<p>The catalog in&nbsp;your ShopApp will be&nbsp;fully synced with your inventory: images, prices, availability, all the&nbsp;details.</p>
+			<div class="phones">
+				<img src="images/sync-img.jpg" alt="">
+				<div class="store-text">Your Online Store</div>
+				<div class="app-text">ShopApp</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>

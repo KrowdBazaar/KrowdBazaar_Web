@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
+	<title>#1 Free E-commerce Shopping Cart &amp; Online Store Solution!</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,700&amp;subset=cyrillic,latin" rel="stylesheet" type="text/css"/>
+  	<%= stylesheet_link_tag "css/kbazaar_style" %>
+	<%= javascript_include_tag "js/jquery.min" %>
+</head>
+
+<body>
+
+  <%= yield %>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-136349561-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136349561-1');
+</script>
+
+    <script>
+  var div = document.createElement('div');
+  div.className = 'fb-customerchat';
+  div.setAttribute('page_id', '541363936033904');
+  div.setAttribute('ref', 'KBAZAAR_SHOPAPP_PAGE');
+  document.body.appendChild(div);
+  window.fbMessengerPlugins = window.fbMessengerPlugins || {
+    init: function () {
+      FB.init({
+        appId            : '1678638095724206',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v3.0'
+      });
+    }, callable: []
+  };
+  window.fbAsyncInit = window.fbAsyncInit || function () {
+    window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+    window.fbMessengerPlugins.init();
+  };
+  setTimeout(function () {
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  }, 0);
+</script>
+</body>
+</html>
